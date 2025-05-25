@@ -32,6 +32,7 @@ def move_s3_to_s3(s3_client, bucket_name, source_prefix, destination_prefix,file
                 source_key = obj['Key']
                 destination_key = destination_prefix + source_key[len(source_prefix):]
 
+                # there is no direct move command in s3, so we first copy the file to destination and then delete it from the source 
                 s3_client.copy_object(Bucket=bucket_name,
                                       CopySource={'Bucket': bucket_name,
                                                   'Key': source_key}, Key=destination_key)

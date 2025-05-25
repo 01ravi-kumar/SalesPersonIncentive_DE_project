@@ -23,7 +23,7 @@ sales_persons = {
 }
 
 
-file_location = "C:\\Users\\nikita\\Documents\\data_engineering\\spark_data"
+file_location = "C:\\Users\\ravi2\\projects\\DE_project_by_manish\\codebase\\data_files\\spark_data"
 
 if not os.path.exists(file_location):
     os.makedirs(file_location)

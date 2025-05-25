@@ -20,7 +20,7 @@ sales_persons = {
     123: [7, 8, 9]
 }
 
-file_location = "C:\\Users\\nikita\\Documents\\data_engineering\\spark_data"
+file_location = "C:\\Users\\ravi2\\projects\\DE_project_by_manish\\codebase\\data_files\\spark_data"
 
 if not os.path.exists(file_location):
     os.makedirs(file_location)
@@ -28,7 +28,7 @@ if not os.path.exists(file_location):
 input_date_str = input("Enter the date for which you want to generate (YYYY-MM-DD): ")
 input_date = datetime.strptime(input_date_str, "%Y-%m-%d")
 
-csv_file_path = os.path.join(file_location, f"sales_data_{input_date_str}.csv")
+csv_file_path = os.path.join(file_location, f"less_column_sales_data_{input_date_str}.csv")
 with open(csv_file_path, "w", newline="") as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(["customer_id", "product_name", "sales_date", "sales_person_id", "price", "quantity", "total_cost", "payment_mode"])

@@ -5,15 +5,25 @@ def get_mysql_connection():
         host="localhost",
         user="root",
         password="password",
-        database="manish"
+        database="de_db"
+        # ssl_disabled=True
     )
     return connection
 
 
 
+# create a database in docker container
+# docker run --name mysql1 -e MYSQL_ROOT_PASSWORD=password  -e MYSQL_DATABASE=de_db -p 3306:3306 -v ./db_mount:/var/lib/mysql -d mysql:latest
 
+# go inside the container
+# docker exec -it mysql2 bash
 
+# run the mysql shell
+# mysql -p
+# enter the password 
 
+# select the our created database which is de_db
+# use de_db
 
 
 
